@@ -3,8 +3,15 @@ public class MyApp {
     	Product product = new Product("Edam", 3.3, 120);
     	System.out.println("Product value is " + product.countValue());
     	product.printProduct();
+		
+		System.out.println("\nCalling method changeAmount(245)");
 		product.changeAmount(245);
 		product.printProduct();
+		
+		System.out.println("\nCalling method changePrice(4.1)");
+		product.changePrice(4.1);
+		product.printProduct();
+    	System.out.println("Product value is " + product.countValue());
      }
 }
 
@@ -29,5 +36,7 @@ public class MyApp {
 		this.amount = newvalue;
 	}
 	
-	
+	public void changePrice(double newPrice) {
+		this.price = newPrice;
+	}
 }
